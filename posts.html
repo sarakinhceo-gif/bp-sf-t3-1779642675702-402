@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 · sf-t3-1779642675702-402</title>
+  <meta name="description" content="sf-t3-1779642675702-402에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-402.maphoshirts.today/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* RESET & BASE */
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ scroll-behavior: smooth;
+ }
+ body {
+ font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+ background: #1a1a1a;
+ color: #e0e0e0;
+ line-height: 1.6;
+ min-height: 100vh;
+ }
+ /* TYPOGRAPHY - raw bold */
+ h1, h2, h3, h4 {
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: -0.02em;
+ color: #f5f5f5;
+ }
+ h1 {
+ font-size: clamp(2.5rem, 8vw, 5rem);
+ line-height: 0.9;
+ margin-bottom: 1rem;
+ text-shadow: 4px 4px 0 #ff3b3b;
+ }
+ h2 {
+ font-size: clamp(1.8rem, 5vw, 3rem);
+ margin-bottom: 1.5rem;
+ border-left: 8px solid #ff3b3b;
+ padding-left: 1rem;
+ }
+ h3 {
+ font-size: clamp(1.3rem, 3vw, 2rem);
+ margin-bottom: 0.8rem;
+ }
+ p {
+ margin-bottom: 1rem;
+ font-size: 1.1rem;
+ }
+ a {
+ color: #ff6b6b;
+ text-decoration: none;
+ font-weight: 700;
+ border-bottom: 2px solid transparent;
+ transition: all 0.2s;
+ }
+ a:hover {
+ border-bottom-color: #ff3b3b;
+ color: #ff3b3b;
+ }
+ /* LAYOUT */
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 1.5rem;
+ }
+ section {
+ padding: 4rem 0;
+ border-bottom: 3px solid #333;
+ }
+ section:last-of-type {
+ border-bottom: none;
+ }
+ /* HEADER */
+ header {
+ background: #0d0d0d;
+ padding: 1rem 0;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ border-bottom: 3px solid #ff3b3b;
+ }
+ .header-inner {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo a {
+ font-size: 1.5rem;
+ font-weight: 900;
+ color: #f5f5f5;
+ border: none;
+ text-transform: uppercase;
+ }
+ .logo a:hover {
+ color: #ff3b3b;
+ }
+ nav ul {
+ display: flex;
+ list-style: none;
+ gap: 2rem;
+ }
+ nav a {
+ color: #ccc;
+ font-weight: 700;
+ font-size: 1rem;
+ border: none;
+ text-transform: uppercase;
+ transition: color 0.2s;
+ }
+ nav a:hover {
+ color: #ff3b3b;
+ }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ gap: 5px;
+ }
+ .hamburger span {
+ width: 28px;
+ height: 3px;
+ background: #f5f5f5;
+ border-radius: 2px;
+ transition: all 0.3s;
+ }
+ .tel-link {
+ display: inline-block;
+ background: #ff3b3b;
+ color: #fff;
+ padding: 0.6rem 1.5rem;
+ font-weight: 900;
+ border: none;
+ font-size: 1.2rem;
+ transition: background 0.2s;
+ }
+ .tel-link:hover {
+ background: #cc0000;
+ color: #fff;
+ }
+ /* HERO */
+ .hero {
+ background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+ padding: 6rem 0 4rem;
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+ }
+ .hero::before {
+ content: '';
+ position: absolute;
+ top: -50%;
+ left: -50%;
+ width: 200%;
+ height: 200%;
+ background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,59,59,0.03) 20px, rgba(255,59,59,0.03) 40px);
+ animation: bgMove 20s linear infinite;
+ }
+ @keyframes bgMove {
+ 0% { transform: translate(0, 0); }
+ 100% { transform: translate(50px, 50px); }
+ }
+ .hero .container {
+ position: relative;
+ z-index: 1;
+ }
+ .hero p {
+ font-size: 1.3rem;
+ color: #aaa;
+ max-width: 700px;
+ margin: 0 auto 2rem;
+ }
+ /* CARDS */
+ .card-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 2rem;
+ margin: 2rem 0;
+ }
+ .card {
+ background: #252525;
+ border: 3px solid #333;
+ padding: 2rem;
+ transition: all 0.3s;
+ }
+ .card:hover {
+ border-color: #ff3b3b;
+ transform: translateY(-5px);
+ }
+ .card h3 {
+ color: #ff6b6b;
+ }
+ .card p {
+ color: #bbb;
+ }
+ /* INFO LIST */
+ .info-list {
+ list-style: none;
+ margin: 1.5rem 0;
+ }
+ .info-list li {
+ padding: 1rem 0;
+ border-bottom: 2px solid #333;
+ display: flex;
+ gap: 1rem;
+ align-items: flex-start;
+ }
+ .info-list li:last-child {
+ border-bottom: none;
+ }
+ .info-list strong {
+ color: #ff6b6b;
+ min-width: 100px;
+ font-size: 1.1rem;
+ }
+ .info-list span {
+ color: #ccc;
+ }
+ /* FAQ */
+ .faq-item {
+ background: #252525;
+ border: 2px solid #333;
+ margin-bottom: 1rem;
+ padding: 1.5rem;
+ }
+ .faq-item h3 {
+ color: #ff6b6b;
+ font-size: 1.2rem;
+ margin-bottom: 0.5rem;
+ }
+ .faq-item p {
+ color: #bbb;
+ margin-bottom: 0;
+ }
+ /* FOOTER */
+ footer {
+ background: #0d0d0d;
+ padding: 3rem 0;
+ text-align: center;
+ border-top: 3px solid #ff3b3b;
+ }
+ footer p {
+ color: #666;
+ font-size: 0.9rem;
+ }
+ footer a {
+ color: #ff6b6b;
+ }
+ /* RESPONSIVE */
+ @media (max-width: 768px) {
+ .hamburger {
+ display: flex;
+ }
+ nav ul {
+ display: none;
+ flex-direction: column;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ width: 100%;
+ background: #0d0d0d;
+ padding: 1rem;
+ border-bottom: 3px solid #ff3b3b;
+ }
+ nav ul.active {
+ display: flex;
+ }
+ nav ul li {
+ margin: 0.5rem 0;
+ }
+ .hero {
+ padding: 4rem 0 2rem;
+ }
+ h1 {
+ font-size: clamp(2rem, 10vw, 3rem);
+ }
+ .card-grid {
+ grid-template-columns: 1fr;
+ }
+ .info-list li {
+ flex-direction: column;
+ gap: 0.3rem;
+ }
+ .info-list strong {
+ min-width: auto;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 · sf-t3-1779642675702-402">
+  <meta property="og:description" content="sf-t3-1779642675702-402에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-402.maphoshirts.today/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container header-inner">
+ <div class="logo">
+ <a href="/">마포 AI트렌드</a>
+ </div>
+ <div class="hamburger" onclick="toggleMenu()">
+ 
+ 
+ 
+ </div>
+ <nav>
+ <ul id="nav-menu">
+ <li><a href="/">홈</a></li>
+ <li><a href="/info">정보</a></li>
+ <li><a href="/review">후기</a></li>
+ <li><a href="/faq">FAQ</a></li>
+ 
+ </ul>
+ </nav>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 19개</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-910.html">마포 골목의 인공지능 열풍과 제미나이 활용의 허상</a>
+        <p class="post-item__summary">마포 골목마다 인공지능이니 제미나이 도입이니 떠들어대는 꼴을 보면 헛웃음이 나온다. 옛날에 힘들게 장사하던 시절에 비하면 세상 참 편해졌다고들 하지만 알맹이 없이 유행만 쫓는 모습은 늘 똑같다. 새</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0018.html">강남 셔츠룸, AI 트렌드를 선도하는 패션 체험 스페이스</a>
+        <p class="post-item__summary">강남 셔츠룸은 AI 트렌드를 중심으로 한 패션 체험 공간이다. 매장 내부는 최신 센서와 프로젝터를 활용해 옷을 입었을 때의 스타일을 실시간으로 보여준다. 고객은 스마트폰으로 제품 상세정보를 확인하며</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0019.html">강남 셔츠룸, AI 트렌드가 만들어낸 공간의 변화</a>
+        <p class="post-item__summary">강남 셔츠룸은 단순한 접대 공간을 넘어 비즈니스 미팅과 소규모 이벤트가 열리는 복합 문화 공간으로 변화하고 있다. 최근 도입되는 AI 기반 서비스들은 이러한 트렌드를 더욱 가속화하고 있으며, 업계의</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0020.html">강남 셔츠룸, AI트렌드와 만나 새로운 패션 공간</a>
+        <p class="post-item__summary">강남 셔츠룸은 최신 패션 트렌드와 AI가 결합된 새로운 미학을 선보인다. 고객은 한눈에 스타일을 완성할 수 있는 다양한 의류를 만나며, 가상 피팅 도구가 시간과 편의를 동시에 제공한다. 이곳은 스타</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0021.html">강남 셔츠룸에 스며든 AI 트렌드, 접대 업계가 달라지고 있다</a>
+        <p class="post-item__summary">최근 강남 셔츠룸 업계에서 AI 기술 도입이 활발히 논의되고 있다. 고객 데이터를 분석해 맞춤형 코스를 제안하는 시스템부터 공간 내 AI 비서 서비스까지, 다양한 시도가 이어지고 있다. 단순한 유행</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0022.html">강남 셔츠룸이 선보이는 AI 패션 트렌드</a>
+        <p class="post-item__summary">강남 셔츠룸은 최신 AI트렌드를 실시간으로 반영한 패션 공간이다. 하루 넘나들며 수많은 시제품을 선보이며, 고객들이 최신 유행을 손쉽게 접할 수 있도록 한다. 매 순간의 변화를 AI가 분석해 실시간</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0023.html">강남 셔츠룸 예약, AI 기반 시스템이 바꾸는 풍경</a>
+        <p class="post-item__summary">최근 강남 셔츠룸 업계에 AI 기반 매칭 시스템이 속속 도입되고 있다. 고객의 선호도와 방문 이력을 분석해 최적의 룸과 서비스를 추천하는 방식이다. 전화 예약이 주를 이루던 기존 관행에서 벗어나 디</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0024.html">강남 셔츠룸에서 AI 트렌드와 함께하는 마포 비즈니스</a>
+        <p class="post-item__summary">마포 한가운데, 최신 AI 인프라를 적용한 강남 셔츠룸이 문을 열었습니다. 뷰티와 패션을 넘어 AI 기반 데이터 분석까지 한 곳에서 체험할 수 있는 미래형 오피스 공간입니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0025.html">강남 셔츠룸, 데이터가 만드는 새로운 선택 기준</a>
+        <p class="post-item__summary">강남 셔츠룸을 고를 때 어떤 기준을 가장 먼저 떠올리는지 생각해본 적이 있는가. 최근에는 단순한 위치나 가격보다 실제 공간의 분위기와 서비스 스타일을 미리 확인하고 방문하려는 사람들이 부쩍 늘고 있</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0026.html">마포의 패션 트렌드를 선도하는 강남 셔츠룸</a>
+        <p class="post-item__summary">강남 셔츠룸이 마포에서 가장 주목받는 곳 중 하나로, 길거리에서 바로 눈에 띄는 모던한 인테리어가 인상적입니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0027.html">강남 셔츠룸, AI 트렌드로 진화하는 마포 접객 문화</a>
+        <p class="post-item__summary">최근 마포 상권에서도 강남 셔츠룸 스타일의 프리미엄 접객 서비스에 AI 기술이 본격적으로 도입되고 있다. 단순한 자리 안내와 음료 서비스를 넘어 방문객 데이터를 분석한 맞춤형 응대 시스템이 주목받고</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0028.html">강남 셔츠룸: 창의와 비즈니스가 만나는 핫스팟</a>
+        <p class="post-item__summary">강남 셔츠룸은 카페보다 더 큰 의미를 지닌 공간입니다. 마포의 중심가에 위치한 이곳은 젊은 창업가와 디자이너가 자유롭게 아이디어를 교환하는 허브로 떠오르고 있습니다. 최신 인테리어와 자연 채광이 어</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0029.html">강남 셔츠룸, AI 접대 서비스로 진화하는 프라이빗 비즈니스 공간</a>
+        <p class="post-item__summary">최근 접대 업계에서 인공지능 기술 도입이 활발해지고 있다. 강남 셔츠룸 역시 AI 기반 추천 시스템과 스마트 예약 솔루션을 도입하며 변화하는 흐름에 동참하고 있다. 과거 경험과 감에 의존하던 접대 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0030.html">강남 셔츠룸, 최신 AI 트렌드가 겹치는 패션 프리즘</a>
+        <p class="post-item__summary">강남 셔츠룸은 현대적인 분위기와 편리한 교통망을 갖추어 많은 여성들이 선호하는 패션 공간이다. 최신 트렌드를 신속히 반영하며 개인 맞춤형 스타일링 상담도 제공한다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0031.html">강남 셔츠룸 AI 트렌드, 마포 지역으로 확산 중</a>
+        <p class="post-item__summary">최근 강남 셔츠룸 업계에 인공지능 기술이 본격 도입되면서 고객 경험 방식이 달라지고 있다. AI 기반 매칭 시스템과 실시간 선호도 분석을 도입한 업소들이 늘어나는 추세다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0032.html">강남 셔츠룸의 AI 트렌드 혁신</a>
+        <p class="post-item__summary">강남 셔츠룸은 인공지능 트렌드를 선도하며 품질을 재정의한다. 최신 AI 드리프트가 의류 디자인에 투입되어 개성이 돋보인다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0033.html">마포 상권에서 주목받는 강남 셔츠룸, 디지털 전환이 만든 새로운 흐름</a>
+        <p class="post-item__summary">최근 마포 상권에서 강남 셔츠룸을 찾는 수요가 눈에 띄게 증가하고 있다. 과거에는 강남이 유일한 선택지로 여겨졌지만, 교통 인프라 개선과 상권 확장으로 마포 지역에서도 프리미엄 셔츠룸에 대한 접근성</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0034.html">강남 셔츠룸: AI가 선도하는 패션 세상</a>
+        <p class="post-item__summary">강남 셔츠룸은 최신 패션과 편안함이 공존하는 공간이다. 넓은 쇼룸과 깔끔한 인테리어가 방문객에게 편안함을 제공한다. 이곳은 방문자들이 새로운 스타일을 찾는 데 주된 장소가 되고 있다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/interview-001-cbdchf.html">강남 셔츠룸 경험자에게 물어본 현실적인 판단 기준</a>
+        <p class="post-item__summary">강남 지역에서 성행하는 셔츠룸은 독특한 운영 방식과 분위기로 인해 많은 관심을 받는 유흥의 한 형태입니다. 하지만 단순히 호기심으로 방문하기보다는 이 문화가 가진 본질적인 구조와 본인에게 미칠 영향</p>
+      </li>
+      </ul>
+
+    </main>
+  </div>
+</body>
+</html>
